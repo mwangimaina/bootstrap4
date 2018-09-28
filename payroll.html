@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payroll</title>
+	    <link rel="stylesheet" type="text/css" 
+    href="css/bootstrap.css">
+</head>
+<body>
+      <h1 class="alert alert-primary">My Payroll</h1>
+       <section class="row">
+       	    <div class="col-md-6">
+       	    	<form>
+	       	    	 <input type="number" placeholder="Your Basic" 
+	         	 	  class="form-control" id="basic"/> <br>
+
+	         	 	 <input type="number" placeholder="Your Water Allowance" 
+	         	 	  class="form-control" id="water"/><br>
+
+	         	 	 <input type="number" placeholder="Your Health Allowance" 
+	         	 	  class="form-control" id="health"/><br>
+
+	         	 	  <input type="number" placeholder="Your NSSF Deducted" 
+	         	 	  class="form-control" id="nssf"/><br>
+
+	         	 	  <button type="button" class="btn btn-danger"
+	         	 	  onclick="computePayroll();">GET YoUR NETPAY</button>
+	         	 	  <br>
+	         	 	   <div id="result" class="alert alert-success"></div>
+       	    	</form>
+       	    </div>
+       	     <div class="col-md-6">
+       	     	   <!--Create a Web Application for Currency converter from KES to any 5 other currencies -->
+       	     	   <form>
+       	     	   	  
+       	     	   </form>
+
+       	     </div>
+       </section>
+    <script type="text/javascript">
+          function computePayroll(){
+             //Your Logic goes here..
+               var basic=document.getElementById("basic").value;
+               var water=document.getElementById("water").value;
+               var health=document.getElementById("health").value;
+               var nssf=document.getElementById("nssf").value;
+          
+
+               if (basic=="" || water=="" || health=="" || nssf=="") {
+                    document.getElementById("result").innerHTML = "You Must Fill All Fields";
+               }
+              else {
+              	  // do maths
+              	   //convert to int
+              	   var convertedbasic = parseInt(basic);
+              	   var convertedwater = parseInt(water);
+              	   var convertedhealth = parseInt(health);
+              	   var convertednssf = parseInt(nssf);
+
+              	   var answer = (convertedbasic+convertedwater+convertedhealth) - convertednssf;
+              	   document.getElementById("result").innerHTML = 
+              	   "YOUR NETPAY WILL BE: "+answer;
+              }
+          }//end
+
+        //another function
+         function 
+
+    </script>
+</body>
+</html>

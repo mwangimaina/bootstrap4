@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" 
+    href="css/bootstrap.css">
+     <meta name="keywords" content="training, education, apps,
+   web, website, html, css, ....">
+
+   <meta name="description" content="we are a learning institution that focus on Software development training , we offer web design, graphics design, app design and development">
+
+    <!--Scale in different screens-->
+   <meta name="viewport" content="width=device-width, 
+   initial-scale=1.0">
+</head>
+<body>
+     <a href="index.html" class="btn btn-dark">Back Home</a> 
+     <br> <br>
+     <section class="row container">
+         <div class="col-md-6">
+         	 <form>
+         	      <!-- Provide ids for each element-->
+         	 	  <input type="email" placeholder="Your Email" 
+         	 	  class="form-control" id="email"/>
+                  <div id="error1" class="text-danger"></div> <br>
+
+         	 	  <input type="text" placeholder="Your Name" 
+         	 	  class="form-control" id="name"/>
+                    <div id="error2" class="text-danger"></div> <br>
+
+                   <input type="text" placeholder="Your Name" 
+         	 	  class="form-control" id="phone"/>
+                     
+
+
+         	 	  <textarea cols="10" rows="5" 
+         	 	  class="form-control" id="message"></textarea> 
+                  <div id="error3" class="text-danger"></div> <br>
+                  <div id="error4" class="text-danger"></div> <br>
+
+         	 	  <button type="button" class="btn btn-dark" 
+         	 	  onclick="validateForm();">
+         	 	  SEND MESSAGE</button>
+         	 </form>
+         </div> <!--End Colm-->       
+
+         <div class="col-md-6">
+         	 
+         </div> <!--End Colm-->     	
+     </section>
+
+    <script type="text/javascript">
+       //JS functions - categorize your program into blocks
+       //in programming - A function does some task
+       //below function validates our 1st form
+       // A function name is defined by developer
+       //CamelCase: ValidateForm, AddNumbers
+       //snakeCase: validateForm, addNumbers
+       function validateForm()
+       {
+       	   //capture email,name, message store in respective variables
+           var email=document.getElementById("email").value;
+           var name = document.getElementById("name").value; 
+           var message= document.getElementById("message").value; 
+
+           //decision making, if statements
+            if (email=="") {
+                  document.getElementById("error1").innerHTML = "Required Email. Please Enter Your Email";
+             }
+            
+             if (name=="") {
+                 document.getElementById("error2").innerHTML = "Empty Name!";
+             }
+
+             if (message=="") {
+                 document.getElementById("error3").innerHTML = "Empty Message!";
+              }
+
+              if (message.length < 20) {
+                 document.getElementById("error4").innerHTML = "Too Short";
+              }
+
+       }//function ends here
+
+  
+    </script>
+</body>
+</html>
+
+

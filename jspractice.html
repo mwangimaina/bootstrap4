@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Basics</title>
+	   <link rel="stylesheet" type="text/css" 
+    href="css/bootstrap.css">
+</head>
+<body>
+
+ <h1 id="heading1"></h1>
+ <h1 id="heading2"></h1>
+ <h2 id="heading3"></h2> 
+ <p id="paragraph1"></p>
+ <h3 id="sum"></h3>
+ <h3 id="product"></h3>
+ <h3 id="difference"></h3>
+   <script type="text/javascript">
+          
+           document.getElementById("heading1").innerHTML="Hello";
+           document.getElementById("heading2").innerHTML = 500000;
+           document.getElementById("heading3").innerHTML = "Basic JS ";
+           document.getElementById("paragraph1").innerHTML = "This is my paragraph";
+          //data storage
+          //variables - store values
+          //every js variable starts with 'var' keyword
+          var x = 50;
+          var y = 60;
+          //Add them, create a variable  to store answer
+          var total = x + y;
+          document.getElementById("sum").innerHTML = total;
+
+          //multiply
+           var product = x*y;
+           document.getElementById("product").innerHTML = product;
+           //subtract
+           var difference = x-y;
+           document.getElementById("difference").innerHTML = difference;
+          //divide 
+          //above we updated HTML elements using JS
+          //decision making: 2moro
+      </script>
+</body>
+</html>
